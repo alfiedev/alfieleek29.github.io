@@ -1,0 +1,76 @@
+/* ---- ---- Fonts ---- ---- */
+@font-face {
+  font-display: swap;
+  font-family: "SpaceMono";
+  src: url(/assets/fonts/SpaceMono.ttf);
+}
+/* ---- ---- Default Values ---- ---- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---- ---- Body ---- ---- */
+body {
+  color: #fff;
+  display: flex;
+  font-size: 100%;
+  min-height: 100vh;
+  align-items: center;
+  font-family: "SpaceMono";
+  justify-content: center;
+}
+
+/* ---- ---- Message ---- ---- */
+.page-not-found {
+  width: 600px;
+  padding: 50px;
+  position: relative;
+  background-color: #3343e7;
+}
+.page-not-found .small_title {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.page-not-found .title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.page-not-found .message {
+  margin-bottom: 60px;
+}
+.page-not-found .contact {
+  transition: 0.25s;
+  position: relative;
+}
+.page-not-found .contact:after {
+  background: none repeat scroll 0 0 transparent;
+  left: 0%;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.page-not-found .contact:hover::after {
+  left: 10%;
+  width: 80%;
+}
+
+/* ---- ---- Media Queries ---- ---- */
+@media screen and (max-width: 650px) {
+  .page-not-found {
+    width: 90%;
+  }
+}/*# sourceMappingURL=page-not-found.css.map */

@@ -1,0 +1,102 @@
+/* ---- ---- Root ---- ---- */
+:root {
+  --border: #d2d2d2;
+  --dark-background: #131313;
+  --sub-title-dark: #000000a5;
+  --sub-title-light: #ffffffa5;
+}
+
+/* ---- ---- Fonts ---- ---- */
+@font-face {
+  font-display: swap;
+  font-family: "Outfit";
+  src: url(/assets/fonts/Outfit.ttf);
+}
+/* ---- ---- Dark Mode ---- ---- */
+.dark .legal .subtitle {
+  color: #fff;
+}
+.dark .legal .btn-group .active {
+  color: #fff;
+}
+.dark .legal .btn-group a {
+  color: #000;
+}
+
+/* ---- ---- Legal ---- ---- */
+.legal {
+  margin: auto;
+  width: 1000px;
+  display: flex;
+  padding: 50px 0;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.legal .title {
+  font-size: 64px;
+  margin-bottom: 30px;
+  background: rgb(1, 93, 255);
+  background: linear-gradient(90deg, rgb(3, 182, 255) 20%, rgb(1, 93, 255) 50%, rgb(2, 142, 255) 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.legal .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.legal .btn-group .active {
+  color: #fff;
+  background: linear-gradient(90deg, rgb(3, 182, 255) 20%, rgb(1, 93, 255) 50%, rgb(2, 142, 255) 70%);
+}
+.legal .btn-group a {
+  width: 300px;
+  padding: 16px;
+  font-size: 16px;
+  background: #fff;
+}
+.legal .article-container {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.legal .article-container .article {
+  text-align: start;
+}
+.legal .article-container .article .article-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.legal .article-container .article .bullet-points {
+  gap: 20px;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.legal .article-container .article .bullet-points li {
+  margin-left: 50px;
+}
+
+/* ---- ---- Media Queries ---- ---- */
+@media screen and (max-width: 1100px) {
+  .legal {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .legal .btn-group {
+    gap: 10px;
+  }
+  .legal .btn-group a {
+    width: 100%;
+  }
+  .legal .article-container .article .bullet-points li {
+    margin-left: 20px;
+  }
+}/*# sourceMappingURL=legal.css.map */

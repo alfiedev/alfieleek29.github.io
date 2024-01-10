@@ -1,0 +1,132 @@
+/* ---- ---- Root ---- ---- */
+:root {
+    --border: #d2d2d2;
+    --dark-background: #131313;
+    --sub-title-dark: #000000a5;
+    --sub-title-light: #ffffffa5;
+}
+
+
+/* ---- ---- Fonts ---- ---- */
+@font-face {
+    font-display: swap;
+    font-family: 'Outfit';
+    src: url(/assets/fonts/Outfit.ttf);
+}
+
+/* ---- ---- Dark Mode ---- ---- */
+.dark {
+    .legal {
+        .subtitle {
+            color: #fff;
+        }
+
+        .btn-group {
+            .active {
+                color: #fff;
+            }
+
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+
+/* ---- ---- Legal ---- ---- */
+.legal {
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    padding: 50px 0;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+        font-size: 64px;
+        margin-bottom: 30px;
+        background: rgb(1, 93, 255);
+        background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        align-items: center;
+        justify-content: center;
+
+        .active {
+            color: #fff;
+            background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        }
+
+        a {
+            width: 300px;
+            padding: 16px;
+            font-size: 16px;
+            background: #fff;
+        }
+    }
+
+    .article-container {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+
+        .article {
+            text-align: start;
+
+            .article-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+
+            .bullet-points {
+                gap: 20px;
+                display: flex;
+                margin-top: 20px;
+                flex-direction: column;
+                
+                li {
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+}
+
+/* ---- ---- Media Queries ---- ---- */
+@media screen and (max-width: 1100px) {
+    .legal {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .legal {
+        .btn-group {
+            gap: 10px;
+
+            a {
+                width: 100%;
+            }
+        }
+
+        .article-container {    
+            .article {
+                .bullet-points {                    
+                    li {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

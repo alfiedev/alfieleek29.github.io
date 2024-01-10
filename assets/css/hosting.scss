@@ -1,0 +1,273 @@
+/* ---- ---- Root ---- ---- */
+:root {
+    --border: #d2d2d2;
+    --dark-background: #131313;
+    --sub-title-dark: #000000a5;
+    --sub-title-light: #ffffffa5;
+}
+
+
+/* ---- ---- Fonts ---- ---- */
+@font-face {
+    font-display: swap;
+    font-family: 'Outfit';
+    src: url(/assets/fonts/Outfit.ttf);
+}
+
+/* ---- ---- Dark Mode ---- ---- */
+.dark {
+    // pricing //
+    .pricing {
+        .billing-period {
+            .switch {
+                .slider {
+                    background-color: #fff;
+
+                    &::before {
+                        background-color: #000;
+                    }
+                }
+            }
+        }
+
+        .card-container {
+            .card {
+                .buy {
+                    color: #000;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/* ---- ---- Features ---- ---- */
+.features {
+    margin: auto;
+    width: 1000px;
+    padding: 50px 0;
+    text-align: center;
+
+    .section-category {
+        font-size: 22px;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: rgb(1, 93, 255);
+        background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .card-container {
+        gap: 50px;
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 300px;
+            padding: 28px;
+            text-align: start;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+
+            .card-icon {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                border-radius: 4px;
+                margin-bottom: 30px;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid var(--border);
+
+                .icon {
+                    font-size: 26px;
+                }
+            }
+
+            .card-title {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* ---- ---- Pricing ---- ---- */
+.pricing {
+    margin: auto;
+    width: 1000px;
+    padding: 50px 0;
+    text-align: center;
+
+    .section-category {
+        font-size: 22px;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: rgb(1, 93, 255);
+        background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .billing-period {
+        gap: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 50px;
+
+        span {
+            font-size: 16px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        .switch {
+            width: 60px;
+            height: 34px;
+            position: relative;
+            display: inline-block;
+
+            input {
+                width: 0;
+                height: 0;
+                opacity: 0;
+
+                &:checked + .slider {
+                    background: rgb(1, 93, 255);
+                    background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+                }
+
+                &:checked + .slider::before {
+                    transform: translateX(26px);
+                    -ms-transform: translateX(26px);
+                    -webkit-transform: translateX(26px);
+                }
+            }
+
+            .slider {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                cursor: pointer;
+                position: absolute;
+                -webkit-transition: 0.4s;
+                transform: translate(0px, 0px);
+                transition: 0.6s ease transform;
+                background: var(--dark-background);
+
+                &::before {
+                    left: 4px;
+                    width: 26px;
+                    content: "";
+                    bottom: 4px;
+                    height: 26px;
+                    transition: 0.4s;
+                    position: absolute;
+                    -webkit-transition: 0.4s;
+                    background-color: #fff;
+                }
+            }
+
+            .slider.round {
+                border-radius: 34px;
+
+                &::before {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .card-container {
+        gap: 25px;
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 300px;
+            text-align: start;
+            padding: 48px 32px;
+            border: 1px solid var(--border);
+
+            .card-title {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .card-price {
+                font-size: 16px;
+                margin-bottom: 30px;
+
+                strong {
+                    font-size: 18px;
+                }
+            }
+
+            .card-list {
+                list-style: none;
+                margin-bottom: 50px;
+
+                li {
+                    display: flex;
+                    padding: 15px 0;
+                    justify-content: space-between;
+                    border-bottom: 0.5px solid var(--border);
+                }
+            }
+
+            .buy {
+                width: 100%;
+                border: none;
+                padding: 16px;
+                color: #fff;
+                font-size: 15px;
+                cursor: pointer;
+                transition: 0.3s;
+                border-radius: 4px;
+                font-family: 'Outfit';
+                background-color: var(--dark-background);
+            }
+        }
+    }
+
+    .extra-info {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ---- ---- Media Queries ---- ---- */
+@media screen and (max-width: 1100px) {
+    // features //
+    .features {
+        width: 95%;
+    }
+
+    // pricing //
+    .pricing {
+        width: 95%;
+    }
+}

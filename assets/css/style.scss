@@ -1,0 +1,363 @@
+/* ---- ---- Root ---- ---- */
+:root {
+    --border: #d2d2d2;
+    --dark-background: #131313;
+    --sub-title-dark: #000000a5;
+    --sub-title-light: #ffffffa5;
+}
+
+
+/* ---- ---- Fonts ---- ---- */
+@font-face {
+    font-display: swap;
+    font-family: 'Syne';
+    src: url(/assets/fonts/Syne.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Outfit';
+    src: url(/assets/fonts/Outfit.ttf);
+}
+
+/* ---- ---- Dark Mode ---- ---- */
+.dark {
+    // hero //
+    .hero {
+        .widget-light {
+            z-index: -1;
+            display: none;
+        }
+
+        .widget-dark {
+            z-index: -1;
+            display: block;
+        }
+    }
+
+    // features //
+    .features {
+        .subtitle {
+            color: var(--sub-title-light);
+        }
+    }
+
+    // pricing //
+    .pricing {
+        .subtitle {
+            color: var(--sub-title-light);
+        }
+
+        .card-container {
+            .card {
+                .options {
+                    .all-plans {
+                        color: #000;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    // contact //
+    .contact {
+        .card {
+            .btn-contact {
+                color: #000;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+/* ---- ---- Hero ---- ---- */
+.hero {
+    margin: auto;
+    width: 1100px;
+    display: flex;
+    padding: 50px 0;
+    text-align: center;
+    flex-direction: column;
+
+    .slogan {
+        width: 800px;
+        margin: auto;
+        font-size: 64px;
+        margin-bottom: 30px;
+
+        strong {
+            background: rgb(1, 93, 255);
+            background: linear-gradient(90deg, rgba(3, 182, 255, 1) 10%, rgba(1, 93, 255, 1) 40%, rgba(2, 142, 255, 1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .description {
+        width: 800px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* ---- ---- Team ---- ---- */
+.team {
+    margin: auto;
+    width: 1000px;
+    padding: 50px 0;
+    text-align: center;
+
+    .section-category {
+        font-size: 22px;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: rgb(1, 93, 255);
+        background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .card-container {
+        gap: 50px;
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .employee-card {
+            .employee-img {
+                margin-bottom: 40px;
+                border-radius: 50%;
+
+                img {
+                    padding: 8px;
+                    width: 200px;
+                    height: 200px;
+
+                    border-radius: 50%;
+                    border: 2px solid var(--border);
+                }
+            }
+
+            .employee-name {
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+/* ---- ---- Features ---- ---- */
+.features {
+    margin: auto;
+    width: 1000px;
+    padding: 50px 0;
+    text-align: center;
+
+    .section-category {
+        font-size: 22px;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: rgb(1, 93, 255);
+        background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .card-container {
+        gap: 50px;
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 300px;
+            padding: 28px;
+            text-align: start;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+
+            .card-icon {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                border-radius: 4px;
+                margin-bottom: 30px;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid var(--border);
+
+                .icon {
+                    font-size: 26px;
+                }
+            }
+
+            .card-title {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+/* ---- ---- Pricing ---- ---- */
+.pricing {
+    margin: auto;
+    width: 1000px;
+    padding: 50px 0;
+    text-align: center;
+
+    .section-category {
+        font-size: 22px;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: rgb(1, 93, 255);
+        background: linear-gradient(90deg, rgba(3, 182, 255, 1) 20%, rgba(1, 93, 255, 1) 50%, rgba(2, 142, 255, 1) 70%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-title {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .card-container {
+        gap: 25px;
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 300px;
+            height: 650px;
+            text-align: start;
+            padding: 48px 32px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+
+            .card-title {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            .card-price {
+                font-size: 16px;
+                margin-bottom: 30px;
+
+                strong {
+                    font-size: 18px;
+                }
+            }
+
+            .card-list {
+                list-style: none;
+                margin-bottom: 50px;
+
+                li {
+                    display: flex;
+                    padding: 15px 0;
+                    justify-content: space-between;
+                    border-bottom: 0.5px solid var(--border);
+                }
+            }
+
+            .options {
+                left: 50%;
+                width: 80%;
+                bottom: -10px;
+                position: absolute;
+                transform: translate(-50%, -50%);
+
+                .all-plans {
+                    width: 100%;
+                    border: none;
+                    padding: 16px;
+                    color: #fff;
+                    font-size: 15px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    border-radius: 4px;
+                    font-family: 'Outfit';
+                    background-color: var(--dark-background);
+                }
+
+                .discord {
+                    margin-bottom: 20px;
+                    background-color: navy;
+                }
+            }
+        }
+    }
+
+    .extra-info {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ---- ---- Media Queries ---- ---- */
+@media screen and (max-width: 1200px) {
+    // hero //
+    .hero {
+        width: 90%;
+
+        .slogan {
+            font-size: 52px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    // team //
+    .team {
+        width: 95%;
+    }
+
+    // features //
+    .features {
+        width: 95%;
+    }
+
+    // pricing //
+    .pricing {
+        width: 95%;
+    }
+
+    // contact //
+    .contact {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    // hero //
+    .hero {
+        .slogan,
+        .description {
+            width: 100%;
+        }
+    }
+}
